@@ -19,7 +19,7 @@ namespace FileDB
             string fullPath = folder + fileName;
             string[] fairy = {_fairyName,_fairyAge,_fairyHeight,_fairyPlanet,
             _fairyMagic,_fairyActions,_fairyState};
-            File.WriteAllLines(fullPath, fairy);
+            File.AppendAllLines(fullPath, fairy);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -91,7 +91,7 @@ namespace FileDB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //WriteFairyToFile();
+            File.WriteAllText(@"C:\Temp\WinxDB.txt", "");
         }
     }
 }
